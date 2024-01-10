@@ -111,6 +111,75 @@ void pattern8(int n){
       cout << endl;
     }
 }
+void pattern9(int n){
+for(int i=0;i<n;i++){
+        for(int j=0;j<n-i-1;j++){
+            cout<<" ";
+        }
+        char ch='A';
+        for(int j=1;j<=2*i+1;j++){
+            cout<<ch;
+            if((2*i+1)/2>=j)ch++;
+            else ch--;
+        }
+        for(int j=0;j<n-i-1;j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+void pattern10(int n) {
+int spaces=2*(n-1);
+for(int i=0;i<n;i++){
+    for(int j=i;j<n;j++){
+        cout<<"*";}
+    for(int j=0;j<2*i;j++){
+        cout<<" ";
+    }
+    for(int j=i;j<n;j++){
+        cout<<"*";}
+    cout<<endl;
+    }
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){
+        cout<<"*";
+    }
+    for(int j=1;j<=spaces;j++){
+        cout<<" ";
+    }
+    for(int j=1;j<=i;j++){
+        cout<<"*";
+    }
+    cout<<endl;
+    spaces=spaces-2;
+}
+}
+void pattern11(int n) {
+int spaces=2*(n-1);
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){
+        cout<<"*";
+    }
+    for(int j=1;j<=spaces;j++){
+        cout<<" ";
+    }
+    for(int j=1;j<=i;j++){
+        cout<<"*";
+    }
+    cout<<endl;
+    spaces=spaces-2;
+}
+for(int i=1;i<n;i++){
+    for(int j=i;j<n;j++){
+        cout<<"*";}
+    for(int j=0;j<2*i;j++){
+        cout<<" ";
+    }
+        for(int j=i;j<n;j++){
+        cout<<"*";}
+    cout<<endl;
+    }
+}
 int main()
 {   
     int N;
@@ -123,5 +192,8 @@ int main()
     pattern6(N);
     pattern7(N);
     pattern8(N);
+    pattern9(N);
+    pattern10(N);
+    pattern11(N);
     return 0;
 }
