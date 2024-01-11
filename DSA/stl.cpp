@@ -81,7 +81,7 @@ void stacks(){
     st.pop();
     cout<<st.top()<<endl;
 }
-void sets(){
+void sets(){ //sorted and unique
     set<int> st;
     st.insert(5);
     st.emplace(6);
@@ -94,7 +94,7 @@ void sets(){
     cout<<*a<<endl;
     cout<<*b<<endl;
 }
-void multisets(){
+void multisets(){ //sorted but not unique
     multiset<int> mst;
     mst.insert(1);
     mst.insert(1);
@@ -105,7 +105,26 @@ void multisets(){
     mst.erase(1);
     cout<<mst.count(1)<<endl;
 }
+void uno_set(){
+    unordered_set<int> us; //unique but unordered
+    us.insert(2);
+    us.insert(3);
+    us.insert(9);
+    us.insert(8);
+    us.insert(6);
+    //all functions are same like set
+}
+void maps(){ //similar to dictionary in python. work similar as set by storing unique and ordered key
+    map<int,int> mp;
+    mp[1]=4;
+    mp.insert({2,6});
+    for(auto it:mp){
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+    auto it=mp.find(2);
+    cout<<(*it).second<<endl;
+}
 int main()
-{
+{ 
      return 0;
 }
