@@ -15,15 +15,15 @@ public class Main
 	}
 	//for character hashing
 	public static void CharacterHash() {
-	char[] arr={'a','b','c','d','e','a','a','e','v','e'};
-	int[] hash= new int[26];
-	for(int i=0;i<10;i++){
-		hash[arr[i]-'a']+=1;
+		char[] arr={'a','b','c','d','%','A','F','e','v','&'};
+		int[] hash= new int[256];
+		for(int i=0;i<10;i++){
+		        hash[arr[i]]+=1;
 		}
-	System.out.print("Enter the number to get its frequency ");
+		System.out.print("Enter the number to get its frequency ");
         Scanner sc=new Scanner(System.in);
 		char num;
 		num= sc.next().charAt(0);
-        System.out.print(hash[num-'a']);
+        System.out.print(hash[num]);
 	}
 }
