@@ -5,7 +5,6 @@ public class Solution {
 		int pIndex = partition(input, startIndex, endIndex);
 		quickSort(input, startIndex, pIndex-1);
 		quickSort(input, pIndex+1, endIndex);
-	
 	}
 	public static int partition(int[] arr, int low, int high){
 		int piviot = arr[low];
